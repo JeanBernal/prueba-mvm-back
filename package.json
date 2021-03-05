@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/JeanBernal/comparaOnLine/issues"
   },
-  "homepage": "https://github.com/JeanBernal/comparaOnLine#readme"
+  "homepage": "https://github.com/JeanBernal/comparaOnLine#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.18",
+    "morgan": "^1.10.0"
+  }
 }
