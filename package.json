@@ -1,29 +1,20 @@
 {
-  "name": "test-software-engineer",
+  "name": "interview-coding-test-jean",
   "version": "1.0.0",
-  "description": "ComparaOnline Software Engineer Test",
+  "description": "Hi, welcome to the Software Engineer CO Test. In this test we expect to see your approach to refactor a legacy code into a testeable, object oriented solution.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha spec/*.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/comparaonline/test-software-engineer.git"
+    "url": "git+https://github.com/JeanBernal/comparaOnLine.git"
   },
-  "keywords": [
-    "comparaonline",
-    "test",
-    "software",
-    "engineer"
-  ],
-  "author": "ComparaOnline",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/comparaonline/test-software-engineer/issues"
+    "url": "https://github.com/JeanBernal/comparaOnLine/issues"
   },
-  "homepage": "https://github.com/comparaonline/test-software-engineer#readme",
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^4.0.1"
-  }
+  "homepage": "https://github.com/JeanBernal/comparaOnLine#readme"
 }
