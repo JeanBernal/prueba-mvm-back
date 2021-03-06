@@ -1,28 +1,9 @@
 const coTest = require('./coTest');
 const Product = coTest.Product;
 const CarInsurance = coTest.CarInsurance;
+const Products = require('./models/Product');
 
-const arrProducts = [
-  [
-    'Medium Coverage',
-    10,
-    20
-  ],
-  [
-    'Coverage',
-    10,
-    20
-  ]
-]
-let name = null
-for (let i = 0; i < arrProducts.length; i++) {
-  name = arrProducts[0][0];
-  
-  
-}
-console.log(name);
 
-//return 1;
 const productsAtDayZero = [
     new Product('Medium Coverage', 10, 20),
     new Product('Full Coverage', 2, 0),
@@ -41,6 +22,7 @@ const productsAtDayZero = [
   };
   
   for (let i = 1; i <= 30; i += 1) {
+    
     console.log(`Day ${i}`);
     console.log('name, sellIn, price');
     carInsurance.updatePrice().forEach(productPrinter);
