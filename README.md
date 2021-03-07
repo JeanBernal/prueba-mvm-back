@@ -1,3 +1,15 @@
+# Raise project
+
+npm install
+npm run serve
+
+The service runs in: http://localhost:3000/dev
+
+There are the methods to scale the code in the creation of the products:
+create, update, delete.
+
+With the report button, an in put is generated in the console with the variations of the products in 30 days.
+
 # ComparaOnline Test Requirements Specification
 
 Hi, welcome to the Software Engineer CO Test. In this test we expect to see your approach to refactor a legacy code into a testeable, object oriented solution.
