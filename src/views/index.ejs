@@ -7,7 +7,7 @@
             <div class="col-md-5">
                 <div class="card">
                     <div class="card-body">
-                        <form action="/save" method="POST">
+                        <form action="/dev/save" method="POST">
                             <div class="form-group">
                                 <input type="text" name="name" placeholder="Title" class="form-control">
                             </div>
@@ -41,8 +41,8 @@
                                 <td><%= products[i].sellIn %></td>
                                 <td><%= products[i].price %></td>
                                 <td>
-                                    <a href="delete/<%= products[i]._id %>" class="btn btn-danger">Delete</a>
-                                    <a href="update/<%= products[i]._id %>" class="btn btn-info">Update</a>
+                                    <a href="dev/delete/<%= products[i]._id %>" class="btn btn-danger">Delete</a>
+                                    <a href="dev/update/<%= products[i]._id %>" class="btn btn-info">Update</a>
                                 </td>
                             </tr>
                         <% } %>

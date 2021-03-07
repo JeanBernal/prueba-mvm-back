@@ -30,7 +30,7 @@ router.post('/save', async(req, res)=>{
     });
     await product.save();
     console.log(product);
-    res.redirect('/')
+    res.redirect('/dev')
 });
 
 router.get('/update/:id', async (req, res)=>{
@@ -51,7 +51,7 @@ router.post('/update/:id', async (req, res)=>{
     }
     console.log(toUpdate);
     await Product.updateOne({_id: id}, toUpdate, (err, data)=>{
-        res.redirect('/');
+        res.redirect('/dev');
     });
     
 });
@@ -59,7 +59,7 @@ router.post('/update/:id', async (req, res)=>{
 router.get('/delete/:id', async (req, res)=>{
     const {id} = req.params;
     await Product.remove({_id: id});
-    res.redirect('/');
+    res.redirect('/dev');
 })
 module.exports = router;
     
