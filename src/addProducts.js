@@ -8,22 +8,34 @@ const mongo = require("mongodb");
 function listProducts(req, res){
     Products.find({}, (err, prod)=>{
       console.log(prod);
-      let productsAtDayZero = []
+      
+      let productsAtDayZero = [];
+      let name;
+      let sellIn;
+      let price;
+      let a = [];
+      //let carInsurance;
+      //let productPrinter;
       for (let i = 0; i < prod.length; i++) {
         
-        productsAtDayZero = [
-          new Product(prod[i].name, prod[i].sellIn, prod[i].price)
-        ];
-
+        name = prod[i]['name'];
+        sellIn = prod[i]['sellIn'];
+        price = prod[i]['price'];
+        
+        productsAtDayZero.push(
+          new Product(name, sellIn, price)
+        );  
+        console.log(productsAtDayZero)        
+          
       }
+      console.log(a);
       const carInsurance = new CarInsurance(productsAtDayZero);
       const productPrinter = function (product) {
-        console.log(`${product.name}, ${product.sellIn}, ${product.price}`);
-      };
-      
-      for (let i = 1; i <= 30; i += 1) {
+          console.log(`${product.name}, ${product.sellIn}, ${product.price}`);
+        };
+      for (let e = 1; e <= 30; e += 1) {
         
-        console.log(`Day ${i}`);
+        console.log(`Day ${e}`);
         console.log('name, sellIn, price');
         carInsurance.updatePrice().forEach(productPrinter);
         console.log('');
