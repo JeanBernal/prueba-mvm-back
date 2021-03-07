@@ -4,7 +4,9 @@
   "description": "Hi, welcome to the Software Engineer CO Test. In this test we expect to see your approach to refactor a legacy code into a testeable, object oriented solution.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "after-30-days": "",
+    "serve": "node src/app.js"
   },
   "repository": {
     "type": "git",

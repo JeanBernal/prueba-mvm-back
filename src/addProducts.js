@@ -13,9 +13,6 @@ function listProducts(req, res){
       let name;
       let sellIn;
       let price;
-      let a = [];
-      //let carInsurance;
-      //let productPrinter;
       for (let i = 0; i < prod.length; i++) {
         
         name = prod[i]['name'];
@@ -24,13 +21,12 @@ function listProducts(req, res){
         
         productsAtDayZero.push(
           new Product(name, sellIn, price)
-        );  
-        console.log(productsAtDayZero)        
+        );      
           
       }
-      console.log(a);
       const carInsurance = new CarInsurance(productsAtDayZero);
       const productPrinter = function (product) {
+        allProducts = `${product.name}, ${product.sellIn}, ${product.price}`
           console.log(`${product.name}, ${product.sellIn}, ${product.price}`);
         };
       for (let e = 1; e <= 30; e += 1) {
