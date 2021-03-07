@@ -1,4 +1,4 @@
-# Levantar proyecto
+# Raise project
 
 npm install
 npm run serve
