@@ -1,7 +1,15 @@
+'use restrict'
+
 const express = require('express');
 const router = express.Router();
 const Product = require('../models/Product');
 //const Prod = require('../addProducts');
+//
+//router.get('/list-products', Prod.listProducts, (req, res)=>{
+//    console.log('ok');
+//    res.send('ok');
+//    
+//});
 
 router.get('/', async (req, res)=>{
     const products = await Product.find();
