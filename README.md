@@ -1,7 +1,7 @@
 # Levantar Proyecto
 
-npm i
-npm run serve
+- npm i
+- npm run serve
 
 The service runs in: http://localhost:3002/dev
 
