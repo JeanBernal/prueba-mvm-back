@@ -1,4 +1,4 @@
-#Instalar dependencias
+# Instalar dependencias
 - npm i
 
 # Levantar Proyecto
