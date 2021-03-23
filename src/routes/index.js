@@ -2,64 +2,66 @@
 
 const express = require('express');
 const router = express.Router();
-const Product = require('../models/Product');
-//const Prod = require('../addProducts');
-//
-//router.get('/list-products', Prod.listProducts, (req, res)=>{
-//    console.log('ok');
-//    res.send('ok');
-//    
-//});
+const User = require('../models/User');
+
 
 router.get('/', async (req, res)=>{
-    const products = await Product.find();
-    console.log(products);
-    res.render('index', {
-        products
-    });
+    const users = await User.find();
+    console.log(users);
+    res.json({
+        users
+    })
     
 });
 
-router.post('/save', async(req, res)=>{
-    console.log(req.body);
-    const product = new Product({
-        name:req.body.name,
-        sellIn:req.body.sellIn,
-        price:req.body.price
+router.post('/save', async (req, res)=>{
+    
+    const user = new User({
+        nombre:req.body.nombre,
+        apellido:req.body.apellido,
+        email:req.body.email,
+        telefono:req.body.telefono
 
     });
-    await product.save();
-    console.log(product);
-    res.redirect('/dev')
+    await user.save();
+    //console.log(user);
+    res.json({
+        msg: "Usuario creado de forma exitosa",
+    })
 });
 
 router.get('/update/:id', async (req, res)=>{
     const {id} = req.params;
-    const product = await Product.findById(id);
+    const user = await User.findById(id);
     res.render('update', {
-        product
+        user
     });
 });
 
-router.post('/update/:id', async (req, res)=>{
+router.put('/update/:id', async (req, res)=>{
     const {id} = req.params;
     console.log(id);
     let toUpdate = {
-        name: req.body.name,
-        sellIn: req.body.sellIn,
-        price: req.body.price,
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        email: req.body.email,
+        telefono: req.body.telefono
     }
     console.log(toUpdate);
-    await Product.updateOne({_id: id}, toUpdate, (err, data)=>{
-        res.redirect('/dev');
+    await User.updateOne({_id: id}, toUpdate, (err, data)=>{
+        res.json({
+            msg: "usuario actualizado"
+        });
     });
     
 });
 
-router.get('/delete/:id', async (req, res)=>{
+router.delete('/delete/:id', async (req, res)=>{
     const {id} = req.params;
-    await Product.remove({_id: id});
-    res.redirect('/dev');
+    await User.remove({_id: id});
+    res.json({
+        msg: "El usuario ha sido eliminado"
+    })
 })
 module.exports = router;
     

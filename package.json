@@ -1,30 +1,41 @@
 {
-  "name": "interview-coding-test-jean",
+  "name": "prueba-mvm-back",
   "version": "1.0.0",
-  "description": "Hi, welcome to the Software Engineer CO Test. In this test we expect to see your approach to refactor a legacy code into a testeable, object oriented solution.",
+  "description": "..",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec",
-    "after-30-days": "",
     "serve": "node src/app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JeanBernal/comparaOnLine.git"
+    "url": "git+https://github.com:JeanBernal/prueba-mvm-back.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JeanBernal/comparaOnLine/issues"
+    "url": "https://github.com:JeanBernal/prueba-mvm-back/issues"
   },
-  "homepage": "https://github.com/JeanBernal/comparaOnLine#readme",
+  "homepage": "github.com:JeanBernal/prueba-mvm-back#readme",
   "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "body-parser": "^1.19.0",
+    "colorette": "^1.2.0",
+    "cors": "^2.8.5",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mongoose": "^5.11.18",
     "morgan": "^1.10.0",
-    "chai": "^4.1.2",
-    "mocha": "^4.0.1"
+    "socket.io": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "webpack": "^5.26.3",
+    "webpack-dev-middleware": "^4.1.0"
   }
 }

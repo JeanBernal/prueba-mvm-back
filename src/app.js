@@ -2,28 +2,31 @@ const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const cors = require('cors')
+var bodyParser = require('body-parser');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost/compara')
+app.use(cors());
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true })); 
+
+mongoose.connect('mongodb://localhost/mvm')
         .then(db=>console.log('db connected'))
         .catch(err=>console.log(err));
 
-
-//const indexRoutes = require('./routes/index');
 const dev = require('./routes/dev');
 
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3002);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(morgan('dev'))
 app.use(express.urlencoded({extended:false}));
 
-//app.use('/', indexRoutes);
 app.use('/dev', dev);
-
 
 app.listen(app.set('port'), ()=>{
     console.log(`server on port ${app.set('port')}`);
