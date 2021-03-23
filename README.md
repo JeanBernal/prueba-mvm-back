@@ -1,6 +1,7 @@
-# Levantar Proyecto
-
+#Instalar dependencias
 - npm i
+
+# Levantar Proyecto
 - npm run serve
 
 The service runs in: http://localhost:3002/dev
